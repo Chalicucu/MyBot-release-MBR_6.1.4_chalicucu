@@ -208,7 +208,7 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
 			If $debugsetlog = 1 Then Setlog("No Wast time... exit, no troops usable left",$COLOR_PURPLE)
 			ExitLoop ;Check remaining quantities
 		EndIf
-		For $i = $eLava To $eBarb step -1 ; lauch all remaining troops
+		For $i = $eBarb To $eLava ; lauch all remaining troops
 			;If $i = $eBarb Or $i = $eArch Then
 			LauchTroop($i, $nbSides, 0, 1)
 			CheckHeroesHealth()
