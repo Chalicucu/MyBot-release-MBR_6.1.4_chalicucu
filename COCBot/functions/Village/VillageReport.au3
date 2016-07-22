@@ -58,5 +58,5 @@ Func VillageReport($bBypass = False, $bSuppressLog = False)
 		If _Sleep($iDelayVillageReport1) Then Return
 		If $i >= 20 Then ExitLoop
 	WEnd
-	
+
 EndFunc   ;==>VillageReport
