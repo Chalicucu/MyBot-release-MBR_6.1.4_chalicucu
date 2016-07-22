@@ -1,0 +1,54 @@
+1. Switch accounts up to 8!
+    To set up total accounts on emulator, go to tab Bot\Profiles and set at "Total CoC Accounts"
+
+2. Dynamic choose group of accounts to play one time:
+   - By GUI setup, go to tab Bot\Profiles and set "Accounts Playing List"
+         Example: set order as "123"
+           mean bot will play on three accounst: 1st, 2nd and 3rd, and switching step is: 1->2->3->1 ..... Change the value to your case.
+   - For RUNNING TIME setup, use pushbullet message: BOT ACC ..., BOT ADD <account no>, or BOT REM <account no>
+     eg: BOT ACC 138 => bot play with switching step is: 1->3->8->1 .....
+         BOT ACC 1386 => add account 6 to order list => bot play with switching step is: 1->3->8->6->1 .....
+         BOT ACC 3 => play only on account 3
+         BOT ADD 6 => add account number 6 to playing list
+         BOT REM 6 => remove account number 6 from playing list
+
+3. Dynamic setup profiles correspond to accounts (& switch profile):
+   - By GUI setup, go to tab Bot\Profiles and set "Mapping profile Indexs", choose profiles' index correspond to all accounts registered on your emulator:
+     Example, set as: 12311111
+     Digit N is the profile index correspond to account N. I have 8 accounts so set up with 8 digits
+     For example, you have 2 accounts and the 1st one using profile 1, the 2nd one using profile 3, just set up: profile = 13
+   - For RUNNING TIME setup, use pushbullet commands: BOT PRO ..., BOT ALLPRO ...  and BOT MAP ...
+    BOT PRO use for set up profiles correspond to playing accounts in ordered step. Example, you have 3 accounts set up by BOT ACC 138, so with command: BOT PRO 124, account 1 will use profile 1, account 3 use profile 2, and account 8 use profile 4
+    BOT ALLPRO use for set up profiles correspond to all exists accounts. Example, BOT ALLPRO 12323245 will set up profile for all 8 accounts with digit N is profile index of account N
+    BOT MAP will set up profile for only one account: BOT MAP 2-5 => account 2 use profile 5
+    (Tips: in my experience, I always setup 1 account as train/donate only with full army setting to >=80%. If the donation account require 100% as full army, it will take longer time to stay at this acc.
+      To setup profile as train/donate only, go to tab "Village\Misc" and check "Halt attack" box, then set "when..." option is "Now (Train/Donate Only)" )
+
+4. Provide Multi Switching Mode
+  * Mode 0: shortest training. (smart idea and init code by @demen , modified by me)
+    The Bot will play first round of play list as ordered,  then identify which account is attacking account and which one is donating account.
+    From the 2nd round, Bot play attacking account first. It choose which account has the shortest training time to switch to and attack when reaching full army
+    After playing around with attacking accounts by that method, Bot switch to donating accounts, donate then again comeback to attacking accounts.
+    And so on...
+
+    * Mode 1: Ordered playing list.
+    Bot play accounts sequentially as ordered in play list. This is the original method  provided from previous version
+
+     * Mode 2: Random.
+     It mean that the switching is randomized. Any account in play list can be next switching account.
+    
+   How to setup this option:
+   - On Swtich CoC Account GUI, choose mode on "Switching Mode" option.
+   - By pushbullet command: BOT MODE <mode ID> 
+     Example: BOT MODE 0 => mode set as Shortest training mode
+
+5. Get current order by pushbullet msg: BOT GETORDER
+
+6. Option to enable/disable attack plan.
+   If this option is disabled, the attack plan of profile have no meaning, bot will always go to attack after full army
+   - On GUI, config on tab Bot\Profiles => set check box "Check attack plan"
+   - Pushbullet command: BOT ATKP 1 => enable attack plan,
+                             and: BOT ATKP 0 => disable attack plan
+
+7. Option to tell the bot go to relax, if one account in order list is not in attack plan. Set "Relax attack together" on GUI
+Note that all the BOT command will be applied on next switching step.
