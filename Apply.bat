@@ -1,5 +1,5 @@
-Set DESC=E:\MyBot-release-MBR_6.1.3\NDTHUAN\SWITCHACC
-Set SRC=E:\MyBot-release-MBR_6.1.3
+Set DESC=.\Chalicucu\SWITCHACC
+Set SRC=.
 xcopy /F /Y %SRC%\MyBot.run.au3 %DESC%\MyBot.run.au3
 
 xcopy /F /Y "%SRC%\COCBot\MBR Global Variables.au3" "%DESC%\COCBot\MBR Global Variables.au3"

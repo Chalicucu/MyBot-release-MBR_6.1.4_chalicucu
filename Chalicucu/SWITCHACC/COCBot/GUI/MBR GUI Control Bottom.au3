@@ -55,7 +55,6 @@ Func Initiate()
 		If Not $RunState Then Return
 
 		checkMainScreen()
-		;InitOrder();chalicucu
 		If Not $RunState Then Return
 
 		ZoomOut()
