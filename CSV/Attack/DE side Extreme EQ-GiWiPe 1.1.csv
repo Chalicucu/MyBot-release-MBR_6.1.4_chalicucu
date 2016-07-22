@@ -1,0 +1,42 @@
+NOTE  |Authors: AnDrOmEdA - ver. 1.1 - 12.07.2016
+NOTE  |Attack: EQ-Gi-WiPe, 1 side, Extreme Dark Elixir Attack.
+NOTE  |TH8 Make these Troops: 14 Giants,8 wbs,2 pekkas,16 Wizards,spells 1 Rage,4 EQ
+NOTE  |TH9 Make these Troops: 13 Giants,8 wbs,3 pekkas,16 Wizards,spells 1 Rage,4 EQ,1 Heal 
+NOTE  |TH10 Make these Troops: 12 Giants,8 wbs,4 pekkas,16 Wizards,spells 2 Rage,4 EQ,1 Heal
+
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE|
+SIDE  |           |           |           |           |           |10         |           |           |
+
+      |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|___________|
+MAKE  |A          |FRONT-LEFT |10         |1          |INT-EXT    |0          |5          |           |
+MAKE  |B          |FRONT-RIGHT|10         |1          |INT-EXT    |0          |5          |           |
+MAKE  |C          |FRONT-RIGHT|10         |1          |EXT-INT    |0          |5          |           |  
+MAKE  |D          |FRONT-LEFT |10         |1          |EXT-INT    |0          |5          |           |
+MAKE  |E          |FRONT-LEFT |10         |-11        |EXT-INT    |0          |5          |           |   
+MAKE  |F          |FRONT-LEFT |10         |-12        |EXT-INT    |0          |5          |           |
+MAKE  |G          |FRONT-LEFT |10         |-9         |EXT-INT    |0          |5          |           |
+MAKE  |H          |FRONT-LEFT |10         |-15        |EXT-INT    |0          |5          |           |
+
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|
+DROP  |E          |10         |4          |Espell     |005        |005        |50         |           |
+DROP  |A-B        |1-4        |1          |giant      |200        |200        |500-1000   |           |
+DROP  |A-B        |1-4        |7          |giant      |200        |200        |500-1000   |           |
+DROP  |C-D        |5-10       |2          |wiza       |0          |50         |100-300    |           |
+DROP  |A-B        |1-9        |4          |wiza       |005        |50         |50         |           |
+DROP  |A-B        |2          |3          |wall       |0          |0          |50         |           |
+DROP  |A          |1          |4          |wall       |0          |0          |300-500    |           |
+DROP  |A          |1          |5          |Pekk       |500        |0          |100        |           |
+DROP  |A          |1          |1          |king       |0          |0          |100-300    |           |
+DROP  |A          |1          |1          |queen      |0          |0          |100-300    |           | 
+DROP  |G          |10         |1          |Rspell     |005        |005        |100        |           |
+DROP  |A          |1          |6          |wiza       |005        |50         |50         |           |
+DROP  |B          |2          |2          |CASTLE     |0          |0          |5000-6000  |           |
+DROP  |F          |10         |1          |Hspell     |0          |0          |5000-6000  |           |
+DROP  |H          |10         |1          |Rspell     |0          |0          |50         |           |
+
+
+
+
+
+

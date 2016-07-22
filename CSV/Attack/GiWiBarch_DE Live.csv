@@ -1,0 +1,65 @@
+NOTE  |Author: Chalicucu - ver. 1.7-d - 15.05.2016
+NOTE  |
+NOTE  |Attack: GiWiBarch stacked w/ brute force heroes
+NOTE  |Make these Troops: 12 Giants, 8 WB, 11 Wiz, Barch....
+NOTE  |Attack -1 TH level
+
+
+      |-----------------------------------------------------------------------------------------------|
+      |                                                                                               |
+      |                                                                                               |
+
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE|
+SIDE  |0          |0          |0          |0          |0          |10          |0         |           |
+
+
+      |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|___________|MAKE VECTOR FOR FRONT SIDE ATTACK: GIANTS, WIZ, VALKS, ARCH...
+MAKE  |A          |FRONT-LEFT |10         |1          |INT-EXT    |0          |2          |           |vector for giant front left 
+MAKE  |B          |FRONT-RIGHT|10         |1          |INT-EXT    |0          |2          |           |vector for giant front right
+MAKE  |C          |FRONT-LEFT |20         |3          |INT-EXT    |0          |3          |           |vector for wiz and archers front left
+MAKE  |D          |FRONT-RIGHT|20         |3          |INT-EXT    |0          |3          |           |vector for wiz and archers front right
+MAKE  |E          |FRONT-LEFT |10         |3          |INT-EXT    |0          |3          |           |vector for valks front left
+MAKE  |F          |FRONT-LEFT |10         |1          |INT-EXT    |0          |1          |           |vector for wall breakers front left
+MAKE  |G          |FRONT-RIGHT|10         |1          |INT-EXT    |0          |1          |           |vector for wall breakers front right
+MAKE  |H          |FRONT-LEFT |60         |-7         |INT-EXT    |0          |1          |           |vector for rage spell
+MAKE  |I          |FRONT-LEFT |60         |-14        |INT-EXT    |0          |1          |           |vector for 2nd rage spell
+MAKE  |J          |FRONT-LEFT |60         |-10        |INT-EXT    |0          |1          |           |vector for quakes, freeze and heal spells
+MAKE  |K          |FRONT-LEFT |60         |-13        |INT-EXT    |0          |1          |           |NDTHUAN vector for heal spells
+
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|
+DROP  |A          |1          |4          |giant      |20         |100        |3000       |           |launch 4 giants
+DROP  |C-D        |1-16       |18         |Barb       |0          |0          |2000-4000    |           |launch 6 wizards
+DROP  |C-D        |1-16       |18         |Arch       |0          |0          |2000-4000    |           |launch 6 wizards
+      |NOTE DROP  |C-D        |1-6        |2          |wiza       |0          |0          |300-600    |           |launch 6 wizards
+      |NOTE  |DROP  |H          |1          |1          |RSpell     |0          |0          |0          |           |drop rage spell
+DROP  |A          |1          |20         |giant      |20         |100         |1500       |           |launch 2nd wave of giants
+DROP  |C-D        |1-16       |40         |Barb       |0          |0          |200-500    |           |launch barbarians
+DROP  |C-D        |1-16       |40         |arch       |0          |0          |200-500    |           |launch barbarians
+      |NOTE DROP  |C-D        |6-8        |20         |wiza       |0          |0          |200-500    |           |launch 2nd wave of wizards	100-300
+      |wall2 
+      |NOTE DROP  |J          |1          |1          |FSpell     |0          |0          |0          |           |drop freeze spell
+      |NDTHUAN DROP  |E          |1          |20         |valk       |800        |0          |100-300    |           |launch all valks
+DROP  |F          |1          |4          |wall       |500        |0          |0          |           |launch 2 wall breakers into rage
+DROP  |F-G        |5          |2          |wall       |0          |0          |0          |           |launch 4 wall breakers
+
+DROP  |F          |1          |2          |wall       |500        |0          |100        |           |launch 2 wall breakers into rage
+DROP  |F          |1          |2          |wall       |500        |0          |100        |           |launch 2 wall breakers into rage
+DROP  |F          |1          |2          |wall       |500        |0          |100        |           |launch 2 wall breakers into rage
+DROP  |F          |1          |2          |wall       |0          |0          |100        |           |launch 2 wall breakers into rage
+
+DROP  |A          |1          |1          |castle     |0          |0          |100-300    |           |launch castle  
+DROP  |C-D        |1-3        |20         |wiza       |0          |0          |200-500    |           |launch 2nd wave of wizards	100-300
+DROP  |A          |1          |1          |king       |0          |0          |100-300    |           |launch king   
+DROP  |A          |1          |1          |queen      |0          |0          |1000-2000    |           |launch queen  
+DROP  |A          |1          |1          |warden     |0          |0          |500        |           |launch warden
+DROP  |J          |1          |1          |HSpell     |0          |0          |14000      |           |Heal Spell at -14 tiles from redarea
+DROP  |I          |1          |1          |RSpell     |0          |0          |3000       |           |drop rage spell
+DROP  |K          |1          |1          |HSpell     |0          |0          |0          |           |Heal Spell at -14 tiles from redarea
+DROP  |C-D        |1-6        |20         |barb       |0          |0          |100-300    |           |launch archers
+      |WAIT  |5000       |           |           |           |           |           |           |           |
+DROP  |Q          |1          |1          |warden     |0          |0          |0          |           |Activate warden
+      |WAIT  |10000      |           |           |           |           |           |           |           |
+      |DROP  |R          |3          |1          |king       |0          |0          |100-500    |           |Activate King 
+      |DROP  |S          |3          |1          |queen      |0          |0          |100-500    |           |Activate Queen
+DROP  |C-D        |1-16       |1          |Remain     |0          |0          |100-500    |           |Drop Remain Troops 

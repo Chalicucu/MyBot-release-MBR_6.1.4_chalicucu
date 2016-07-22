@@ -1,0 +1,47 @@
+NOTE  |Author: chalicucu
+NOTE  |
+NOTE  |Attack: Full Dragon Attack DE side
+NOTE  |Tested TH9
+NOTE  |Troops: full dragons + 2 Heal + 2 Rage
+
+
+      |-----------------------------------------------------------------------------------------------|
+      |                                                                                               |
+      |                                                                                               |
+
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE|
+SIDE  |0          |0          |0          |0          |0          |10          |0         |           |
+
+
+      |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|___________|MAKE VECTOR FOR FRONT SIDE ATTACK
+MAKE  |A          |FRONT-LEFT |10         |1          |INT-EXT    |0          |2          |           |
+MAKE  |B          |FRONT-RIGHT|10         |1          |INT-EXT    |0          |2          |           |
+MAKE  |C          |FRONT-LEFT |10         |3          |INT-EXT    |0          |3          |           |
+MAKE  |D          |FRONT-RIGHT|10         |3          |INT-EXT    |0          |3          |           |
+MAKE  |E          |FRONT-LEFT |10         |3          |INT-EXT    |0          |3          |           |
+MAKE  |F          |FRONT-LEFT |10         |1          |INT-EXT    |0          |1          |           |
+MAKE  |G          |FRONT-RIGHT|10         |1          |INT-EXT    |0          |1          |           |
+MAKE  |H          |FRONT-LEFT |60         |-8         |INT-EXT    |0          |1          |           |
+MAKE  |I          |FRONT-LEFT |60         |-14        |INT-EXT    |0          |1          |           |
+MAKE  |J          |FRONT-LEFT |60         |-10        |INT-EXT    |0          |1          |           |
+MAKE  |K          |FRONT-LEFT |60         |-14        |INT-EXT    |0          |1          |           |
+MAKE  |L          |FRONT-LEFT |10         |-7         |INT-EXT    |0          |3          |           |
+MAKE  |M          |FRONT-RIGHT|10         |-7         |INT-EXT    |0          |3          |           |
+MAKE  |N          |FRONT-RIGHT|10         |-8         |INT-EXT    |0          |1          |           |
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|
+DROP  |A          |8          |1          |drag       |0          |0          |200        |           |launch 1 drag on left
+DROP  |B          |8          |1          |drag       |0          |0          |6000       |           |launch 1 drag on right
+DROP  |A-B        |1-5        |4          |drag       |0          |0          |5000       |           |launch all drags at middle
+DROP  |C-D        |1-6        |4          |drag       |0          |0          |1000-2000  |           |launch all drags at middle
+DROP  |H          |6          |1          |RSpell     |0          |0          |100        |           |drop rage spell
+DROP  |N          |3          |1          |HSpell     |0          |0          |100        |           |drop heal spell
+DROP  |F          |1          |10         |drag       |500        |0          |2          |           |
+DROP  |A          |1          |1          |castle     |0          |0          |2000-4000  |           |launch castle  
+DROP  |L-M        |3-6        |10         |HaSpell    |0          |0          |100-300    |           |launch hastle spell if have
+DROP  |A          |1          |1          |king       |0          |0          |100-300    |           |launch king   
+DROP  |A          |1          |1          |queen      |0          |0          |100-300    |           |launch queen  
+DROP  |I          |1          |1          |RSpell     |0          |0          |8000       |           |drop rage spell
+DROP  |K          |2          |1          |HSpell     |0          |0          |8000       |           |Heal Spell
+DROP  |R          |3          |1          |king       |0          |0          |100-500    |           |Activate King 
+DROP  |S          |3          |1          |queen      |0          |0          |100-500    |           |Activate Queen
