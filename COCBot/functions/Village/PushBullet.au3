@@ -64,10 +64,10 @@ Func _RemoteControlPushBullet()
 						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " <" & $iOrigPushBullet & "> " & GetTranslated(620,22,"LASTRAID") & GetTranslated(620,10, " - send the last raid loot screenshot of <Village Name>")
 						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " <" & $iOrigPushBullet & "> " & GetTranslated(620,23,"LASTRAIDTXT") & GetTranslated(620,11, " - send the last raid loot values of <Village Name>")
 						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " <" & $iOrigPushBullet & "> " & GetTranslated(620,24,"SCREENSHOT") & GetTranslated(620,12, " - send a screenshot of <Village Name>")
-						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " ACC <account list>  - set <account list> as new play list"
-						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " ADD <acc number> - add account <acc number> to play list"
-						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " REM <acc number> - remove account <acc number> from play list"
-						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " MAP <acc number>-<profile number> - set profile <profile number> to account <acc number>. eg: BOT MAP 1-3"
+						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " ACC <account list>  - set new play list"
+						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " ADD <acc number> - add an account to play list"
+						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " REM <acc number> - remove an account from play list"
+						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " MAP <acc number>-<profile number> - set profile to an account. eg: BOT MAP 1-3"
 						$txtHelp &= '\n' & GetTranslated(620,1, -1) & " MODE <mode ID> - set switching mode. Eg: BOT MODE 0"
 						$txtHelp &= '\n'
 						$txtHelp &= '\n' & GetTranslated(620,25, "Examples:")
