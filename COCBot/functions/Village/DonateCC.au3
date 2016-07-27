@@ -194,8 +194,6 @@ Func DonateCC($Check = False)
 							ElseIf $varDonateCustom[$i][1] > 8 Then
 								$varDonateCustom[$i][1] = 8 ; Number larger than 8 is unnecessary
 							EndIf
-							setlog("3333")
-
 							DonateTroopType($varDonateCustom[$i][0], $varDonateCustom[$i][1], $iChkDonateCustom) ;;; Donate Custom Troop using DonateTroopType2
 						Next
 					EndIf
@@ -210,10 +208,7 @@ Func DonateCC($Check = False)
 					If $iChkDonateGiants = 1 And $bSkipDonTroops = False And CheckDonateTroop($eGiant, $aDonGiants, $aBlkGiants, $aBlackList, $ClanString) Then DonateTroopType($eGiant)
 					If $iChkDonateBalloons = 1 And $bSkipDonTroops = False And CheckDonateTroop($eBall, $aDonBalloons, $aBlkBalloons, $aBlackList, $ClanString) Then DonateTroopType($eBall)
 					If $iChkDonateHogRiders = 1 And $bSkipDonTroops = False And CheckDonateTroop($eHogs, $aDonHogRiders, $aBlkHogRiders, $aBlackList, $ClanString) Then DonateTroopType($eHogs)
-					If $iChkDonateWizards = 1 And $bSkipDonTroops = False And CheckDonateTroop($eWiza, $aDonWizards, $aBlkWizards, $aBlackList, $ClanString) Then 
-					   	setlog("4444")
-						DonateTroopType($eWiza)
-					EndIf
+					If $iChkDonateWizards = 1 And $bSkipDonTroops = False And CheckDonateTroop($eWiza, $aDonWizards, $aBlkWizards, $aBlackList, $ClanString) Then DonateTroopType($eWiza)
 					If $iChkDonateWallBreakers = 1 And $bSkipDonTroops = False And CheckDonateTroop($eWall, $aDonWallBreakers, $aBlkWallBreakers, $aBlackList, $ClanString) Then DonateTroopType($eWall)
 					If $iChkDonateMinions = 1 And $bSkipDonTroops = False And CheckDonateTroop($eMini, $aDonMinions, $aBlkMinions, $aBlackList, $ClanString) Then DonateTroopType($eMini)
 					If $iChkDonateBarbarians = 1 And $bSkipDonTroops = False And CheckDonateTroop($eBarb, $aDonBarbarians, $aBlkBarbarians, $aBlackList, $ClanString) Then DonateTroopType($eBarb)
@@ -247,7 +242,6 @@ Func DonateCC($Check = False)
 					If $debugsetlog = 1 Then Setlog("Troop All checkpoint.", $COLOR_PURPLE)
 					Select
 						Case $iChkDonateAllCustom = 1
-						setlog("1111")
 							For $i = 0 To 2
 								If $varDonateCustom[$i][0] < $eBarb Then
 									$varDonateCustom[$i][0] = $eArch ; Change strange small numbers to archer
@@ -290,8 +284,6 @@ Func DonateCC($Check = False)
 						Case $iChkDonateAllHogRiders = 1
 							DonateTroopType($eHogs, 0, False, $bDonateAllTroop)
 						Case $iChkDonateAllWizards = 1
-												setlog("2222")
-
 							DonateTroopType($eWiza, 0, False, $bDonateAllTroop)
 						Case $iChkDonateAllWallBreakers = 1
 							DonateTroopType($eWall, 0, False, $bDonateAllTroop)
